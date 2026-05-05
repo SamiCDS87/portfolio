@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+
+    <nav id="navbar">
+      <ul>
+        <li><a href="#welcome-section">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <section id="welcome-section">
+      <h1>Sami COSTA DA SILVA</h1>
+      <p>Développeur Front-End (Junior)</p>
+    </section>
+
+    <section id="about">
+      <h2>À propos</h2>
+      <p>Développeur front-end junior, je progresse à travers des projets concrets et la résolution de problématiques techniques afin d'améliorer mes compétences. Mon objectif est d'évoluer progressivement vers un profil développeur full-stack.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projets</h2>
+      <p class="projects-intro">Voici une sélection de projets réalisés dans le cadre de ma formation en développement web.</p>
+
+      <div class="filter-buttons">
+        <button onclick="filterProjects('all')">Tous</button>
+        <button onclick="filterProjects('html')">HTML/CSS</button>
+        <button onclick="filterProjects('js')">JavaScript</button>
+      </div>
+
+      <div class="projects-container">
+
+        <div class="project-tile html">
+          <a href="https://samicds87.github.io/survey-form/" target="_blank">
+            <img src="images/survey.jpg" alt="Aperçu du projet Survey Form">
+            <div class="overlay">
+              <h3>Survey Form</h3>
+              <p>Formulaire interactif avec validation</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="project-tile html">
+          <a href="https://samicds87.github.io/playing-cards/" target="_blank">
+            <img src="images/cards.jpg" alt="Aperçu du projet Playing Cards">
+            <div class="overlay">
+              <h3>Playing Cards</h3>
+              <p>Cartes interactives avec animations</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="project-tile js placeholder">
+          <img src="https://picsum.photos/300/200" alt="Projet JS en cours">
+          <div class="overlay">
+            <h3>Todo List</h3>
+            <p>Avec localStorage (en cours)</p>
+            <span class="disabled">Bientôt</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>N'hésitez pas à me contacter pour toutes opportunités ou collaborations.</p>
+
+      <a id="phone-number" href="tel:+33751694877">
+        <p>07 51 69 48 77</p>
+      </a>
+
+      <a id="sms-number" href="sms:+33751694877">
+        <p>SMS</p>
+      </a>
+
+      <a id="contact-email" href="mailto:sami.costa@icloud.com">
+        <p>sami.costa@icloud.com</p>
+      </a>
+      
+    </section>
+    
+  </body>
+
+</html>

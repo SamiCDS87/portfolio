@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: #f1f5f9;
+  line-height: 1.6;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #1e293b;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  z-index: 1000;
+}
+
+#navbar a {
+  color: #f1f5f9;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#navbar a:hover {
+  color: #38bdf8;
+}
+
+section {
+  padding: 80px 20px 80px 20px;
+  scroll-margin-top: 80px;
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  padding-top: 250px;
+}
+
+#welcome-section h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #38bdf8;
+}
+
+#welcome-section p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+
+#about {
+  background: #111827;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #38bdf8;
+}
+
+#about p {
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+#projects {
+  background: #0f172a;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #38bdf8;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 3rem auto 0 auto;
+}
+
+.project-tile {
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-tile:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.project-tile a {
+  text-decoration: none;
+  color: #f1f5f9;
+  display: block;
+  padding-bottom: 1rem;
+}
+
+.project-tile img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-tile p {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+.project-tile p::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 3px;
+  margin: 8px auto 0;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border-radius: 2px;
+  transition: width 0.3 ease;
+}
+
+.project-tile:hover p::after {
+  width: 70%;
+}
+
+#contact {
+  background: #111827;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #28bdf8;
+}
+
+#contact p {
+  margin-bottom: 1rem;
+}
+
+#contact a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 60px) {
+  #welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  #about p {
+    font-size: 1rem;
+  }
+}
+
+.project-tile {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.project-tile:hover .overlay {
+  opacity: 1;
+}
+
+.disabled {
+  margin-top: 10px;
+  padding: 6px 10px;
+  background: gray;
+  border-radius: 5px;
+}
+
+.placeholder img {
+  filter: blur(2px);
+}
+
+.filter-buttons {
+  margin-top: 20px;
+}
+
+.filter-buttons button {
+  margin: 5px;
+  padding: 8px 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background: #1e293b;
+  color: white;
+}
+
+.filter-buttons button:hover {
+  background: #38bdf8;
+}
