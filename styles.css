@@ -234,3 +234,24 @@ section {
 .filter-buttons button:hover {
   background: #38bdf8;
 }
+
+.project-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.project-links a {
+  padding: 6px 10px;
+  background: #38bdf8;
+  color: #0f172a;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.project-links a:hover {
+  background: #0ea5e9;
+}
